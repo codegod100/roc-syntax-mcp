@@ -1,3 +1,4 @@
+#https://github.com/lukewilliamboswell/roc-platform-template-zig/blob/main/examples/all_roc_syntax.roc
 app [main!] { pf: platform "../platform/main.roc" }
 
 import pf.Stdout
@@ -144,13 +145,13 @@ if_demo = |num| {
 	# every if must have an else branch!
 	one_line_if = if num == 1 "One" else "NotOne"
 
-	two_line_if = 
+	two_line_if =
 		if num == 2
 			"Two"
 		else
 			"NotTwo"
 
-	with_curlies = 
+	with_curlies =
 	    if num == 5 {
 	        "Five"
 	    } else {
@@ -166,7 +167,7 @@ if_demo = |num| {
 		one_line_if.concat(two_line_if).concat(with_curlies)
 }
 
-tuple_demo = 
+tuple_demo =
 # tuples can contain multiple types
 	("Roc", 1)
 
@@ -229,7 +230,7 @@ Animal := [Dog(Str), Cat(Str)].{
 }
 
 early_return = |arg| {
-	first = 
+	first =
 		if !arg {
 			return 99
 		} else {
